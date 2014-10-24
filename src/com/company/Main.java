@@ -8,5 +8,6 @@ public class Main {
         JFrame jf = new JFrame("Taquin");
         jf.setSize(800, 600);
         jf.setVisible(true);
+        System.out.println("Essai");
     }
 }
