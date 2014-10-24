@@ -17,6 +17,7 @@ public class Grille extends Canvas {
     public Grille(int numColonnes, int numLignes)
     {
         super();
+        System.out.println("coco");
         this.numColonnes=numColonnes;
         this.numLignes=numLignes;
         //Création des cases
@@ -31,9 +32,12 @@ public class Grille extends Canvas {
 
     @Override
     public void paint (Graphics g){
-        for (Case c : cases)
-            g.drawRect(c.getX()*tailleCase+posx,c.getY()*tailleCase+posy,tailleCase,tailleCase);
-            g.setColor(Color.PINK);
+        for (Case c : cases) {
+            g.drawRect(c.getX() * tailleCase + posx, c.getY() * tailleCase + posy, tailleCase, tailleCase);
+            g.setColor(Color.black);
+
+
+        }
 
     }
 

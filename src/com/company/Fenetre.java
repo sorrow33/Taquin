@@ -8,10 +8,13 @@ import javax.swing.*;
 public class Fenetre extends JFrame{
 
     public Fenetre() {
-        super("Jeu de la Catin");
-        setSize(800,600);
-        setVisible(true);
-        add(new Grille(10,10));
+        JFrame jf = new JFrame("Jeu de la Catin");
+        jf.setSize(800,600);
+        jf.add(new Grille(10, 10));
+        jf.setVisible(true);
+
+
+
 
     }
 
