@@ -34,9 +34,9 @@ public class Grille extends Canvas {
     public void paint (Graphics g){
         for (Case c : cases) {
             g.drawRect(c.getX() * tailleCase + posx, c.getY() * tailleCase + posy, tailleCase, tailleCase);
-            g.setColor(Color.black);
-
-
+            g.setColor(Color.PINK);
+            g.fillRect(c.getX() * tailleCase + posx , c.getY() * tailleCase + posy , tailleCase, tailleCase);
+            g.setColor(Color.cyan);
         }
 
     }
