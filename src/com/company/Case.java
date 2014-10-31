@@ -1,27 +1,52 @@
 package com.company;
 
+import java.awt.*;
+
 /**
  * Created by William on 24/10/14.
  */
-public class Case {
+class Case {
 
-    private int x;
-    private int y;
+    private int ligne;
+    private int colonne;
+    private int jeton;
+    private Color couleur;
 
-    public Case (int x,int y)
+
+    public Case (int x,int y,int valeur,Color col)
     {
         super();
-        this.x=x;
-        this.y=y;
+        this.ligne=x;
+        this.colonne=y;
+        this.jeton=valeur;
+        this.couleur=col;
     }
 
-    public int getX()
+    public int getLigne()
     {
-        return x;
+        return ligne;
     }
 
-    public int getY()
+    public int getColonne()
     {
-        return y;
+        return colonne;
+    }
+
+    public void setJeton(int jeton) {
+        this.jeton = jeton;
+    }
+
+    public int getJeton()
+    {
+        return jeton;
+    }
+    public Color getCouleur()
+    {
+        return couleur;
+    }
+
+    public void setCouleur(Color couleur)
+    {
+        this.couleur=couleur;
     }
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Created by William on 24/10/14.
  */
-public class Grille extends Canvas {
+class Grille extends Canvas {
     private ArrayList<Case> cases = new ArrayList<Case>();
     private int numColonnes =0;
     private int numLignes = 0;
@@ -17,14 +17,13 @@ public class Grille extends Canvas {
     public Grille(int numColonnes, int numLignes)
     {
         super();
-        System.out.println("coco");
         this.numColonnes=numColonnes;
         this.numLignes=numLignes;
         //Création des cases
         for(int i=0;i<numColonnes;i++)
         {
             for (int j=0;j<numLignes;j++)
-                cases.add(new Case(i,j));
+                cases.add(new Case(i,j,0,Color.black));
 
         }
 
@@ -33,9 +32,9 @@ public class Grille extends Canvas {
     @Override
     public void paint (Graphics g){
         for (Case c : cases) {
-            g.drawRect(c.getX() * tailleCase + posx, c.getY() * tailleCase + posy, tailleCase, tailleCase);
+            g.drawRect(c.getLigne() * tailleCase + posx, c.getColonne() * tailleCase + posy, tailleCase, tailleCase);
             g.setColor(Color.PINK);
-            g.fillRect(c.getX() * tailleCase + posx , c.getY() * tailleCase + posy , tailleCase, tailleCase);
+            g.fillRect(c.getLigne() * tailleCase + posx , c.getColonne() * tailleCase + posy , tailleCase, tailleCase);
             g.setColor(Color.cyan);
         }
 
